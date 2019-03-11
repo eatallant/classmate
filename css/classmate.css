@@ -1,0 +1,150 @@
+body {
+   font-family: "Arial Rounded", sans-serif;
+    
+}
+.container-fluid {
+    padding: 0;
+}
+h1 {
+    text-align: center;
+    margin:auto;
+    padding: 30px 10px;
+    background-color: #3399ff;
+    color: aliceblue;
+}
+/* navbar and navdrop handle the navigation bar and the buttons the bar contains*/
+header {
+    
+}
+.navbar {
+    
+    padding: 8px;
+    padding-left: 30px;
+    background-color: #3399ff;
+    margin-bottom: 1px;
+    width: 100%;
+    margin-top:1px;
+    border-radius: 2px;
+    
+    
+    
+}
+.navBtn{
+    display: inline-block;
+    font-size: 2em;
+    color: black;
+    margin: 30px;
+    border: 0;
+    padding: 0;
+    margin: 2px;
+    margin-right: 30px;
+    background-color: #3399ff;
+    cursor:pointer;
+    
+}
+.navBtn:hover {
+    text-shadow: 0 0 2px #cccccc, 0 0 4px #f0f0f0;
+}
+
+
+#instructions{
+    text-align: center;
+    margin-top:10%;
+}
+/*container div for the content */
+.mainContainer{
+    margin: auto;
+    margin-top: 50px;
+    width: 80%;
+    padding: 40px;
+    
+}
+
+
+.mainContent {
+    padding-bottom: 100px;
+}
+.clicked {
+    color: white;
+}
+.unclicked {
+    display: none;
+}
+
+#dayPlan thead{
+    font-size: 1.2em;
+}
+#dayPlan td th{
+    padding:5px;
+}
+#dayPlan td{
+    width: 80% !important;
+    border-bottom: 1px solid black;
+    transition: .3s;
+}
+
+#dayPlan td:hover {
+    background-color:aliceblue;
+    opacity: .7;
+    cursor: pointer;
+    
+}
+#dayPlan th:hover {
+    cursor: pointer;
+}
+
+#gradeBook{
+    margin-bottom: 5em;
+}
+.gradeTable{
+    margin-bottom: 3em;
+    border-collapse: collapse;
+    border: 1px solid black;
+    
+}
+.center{
+    text-align: center;
+}
+
+.addAssignments{
+    margin-right: 2em;
+}
+.editText{
+    transition: .4s;
+    position: relative;
+}
+.editText:hover{
+    cursor: pointer;
+    background-color:aliceblue;
+    
+}
+.glyphicon-remove{
+    position: absolute;
+    display: none;
+    width: 32px;
+    color: red;    
+    margin-left: -40px;
+    margin-top: 8px;
+    
+}
+.editText:hover .glyphicon-remove{
+    display: block;
+}
+
+#weekPlan{
+    margin-bottom: 5em;
+}
+#weekPlan th td{
+    text-align: center;
+  
+}
+#weekPlan table{
+    table-layout: fixed;
+}
+
+
+
+.well {
+
+    background-color:aliceblue;
+}
