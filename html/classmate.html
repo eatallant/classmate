@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+
+<html lang = "en">
+    
+    <head>
+        <meta charset = "utf-8">
+        
+        <title>Classmate</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
+        
+        <link rel="stylesheet" href="classmate_new.css" media="screen">
+        <link rel="stylesheet" href="print.css" media="print">
+        
+ 
+
+        
+    </head>
+
+    <body>
+        
+        <div  class="container-fluid">
+        
+            <!-- header section contains all navigation -->
+            <header>
+                
+
+                <div >
+                    <h1>Classmate</h1>
+                </div>
+
+                <nav class="navbar d-print-none">
+                    <button id="topNavLesson" class="navBtn active" data-toggle="collapse" data-target="#lessonPlan">Lesson Plan</button>
+                    <button id="topNavGrade" class="navBtn"  data-toggle="collapse" data-target="#gradeBook">Gradebook</button>               
+                    <button id="topNavNotes" class="navBtn" data-toggle="collapse" data-target="#noteInput">Notes</button>
+                    
+                    <button class="navBtn btn pull-right" onclick=printPage()><span class="glyphicon glyphicon-print"></span></button>
+                    
+                </nav>
+
+                <nav class="navbar lessonNav collapse fade d-print-none" id="lessonPlan">
+                    <button id="navDay" class="navBtn"  data-toggle="collapse" data-target="#dayPlan">Day</button>
+                    <button id="navWeek" class="navBtn"  data-toggle="collapse" data-target="#weekPlan">Week</button>
+                </nav>
+
+
+
+            </header>
+
+            <main>
+                <div id="instructions">
+                    <p><em>To begin, click on a link in the bar and start editing.</em></p>
+                    <p><em>Anything that is showing on the screen when you print will be on the printed page.</em></p>
+                </div>
+                <div class="mainContainer">
+
+                    
+                    <!-- day plan-->
+                    <div id="dayPlanContainer">
+                        
+                        <table id="dayPlan" class="lessonContent mainContent table table-striped collapse fade">
+                          
+                            <thead>
+                                <tr><th class="editText" colspan="2"><span><em>Enter Date</em></span></th></tr>
+                            </thead>
+
+                            <tbody id="dayPlanBody">
+                                <tr>
+                                    <th class="col-md-1">8:00AM</th>
+                                    <td tabindex="0" class="col-md-11"></td>
+                                </tr>
+                                <tr>
+                                    <th>9:00AM</th>
+                                    <td tabindex="0"></td>
+                                </tr>
+                                <tr>
+                                    <th>10:00AM</th>
+                                    <td tabindex="0"></td>
+                                </tr>
+                                <tr>
+                                    <th>11:00AM</th>
+                                    <td tabindex="0"></td>
+                                </tr>
+                                <tr>
+                                    <th>12:00PM</th>
+                                    <td tabindex="0"></td>
+                                </tr>
+                                <tr>
+                                    <th>1:00PM</th>
+                                    <td tabindex="0"></td>
+                                </tr>
+                                <tr>
+                                    <th>2:00PM</th>
+                                    <td tabindex="0"></td>
+                                </tr>
+                                <tr>
+                                    <th>3:00PM</th>
+                                    <td tabindex="0"></td>
+                                </tr>
+                                <tr>
+                                    <th>4:00PM</th>
+                                    <td tabindex="0"></td>
+                                </tr>
+                                <tr>
+                                    <th>5:00PM</th>
+                                    <td tabindex="0"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+
+                    <!-- example week plan -->
+                    <div id="weekPlan" class=" collapse fade" >
+                        <table width="90%"class="mainContent lessonContent table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Sunday</th>
+                                    <th>Monday</th>
+                                    <th>Tuesday</th>
+                                    <th>Wednesday</th>
+                                    <th>Thursday</th>
+                                    <th>Friday</th>
+                                    <th>Saturday</th>
+                                </tr>
+                            </thead>
+                            <tbody id="weekPlanBody">
+                                <tr height="40px">
+                                    <td class="editText"><span></span></td>
+                                    <td class="editText"><span></span></td>
+                                    <td class="editText"><span></span></td>
+                                    <td class="editText"><span></span></td>
+                                    <td class="editText"><span></span></td>
+                                    <td class="editText"><span></span></td>
+                                    <td class="editText"><span></span></td>
+                                </tr>
+                                
+
+                            </tbody>
+                        </table>
+                        <button type="button" class="btn btn-primary" id="addRow">Add Row</button>
+                    </div>
+                    
+
+
+
+                    <!-- gradebook content -->
+                    <div id="gradeBook" class="collapse fade">
+                        <div class="gradebookContainer">
+                            <table class="mainContent table table-striped gradeTable">
+                                <thead >
+                                    <tr>
+                                        <th scope="col" colspan="2"><span class="editText"><span><em>Name This Class</em></span></span></th>
+                                    </tr>
+                                </thead>
+                                <tr class="assignments">
+                                    <th scope="row">
+                                        <button type="button" class="btn btn-primary addAssignment">Add Assignment</button> 
+                                        <button type="button" class="btn btn-primary addStudents">Add Students</button>
+                                        
+                                    </th>
+                                
+                                </tr>
+
+
+                            </table>
+                            <button type="button" class="btn btn-primary" id="newClass">New Class</button>
+                        </div>
+                        
+                        
+                        
+                    </div>
+                    
+
+
+                    <!-- Notes-->
+                    <div id="noteInput" class="collapse fade" >
+                        <div class="noteBoard"></div>
+                        <form style="padding-bottom: 30px">
+
+                            <div class="form-group">
+                                <label for="inputBox">Write a note here:</label>
+                                <textarea class="form-control" id="inputBox" rows="3"></textarea>
+                            </div>
+
+                            <button id="noteBtn" type="button" class="btn btn-primary">Create Note</button>
+                        </form>
+
+
+                    </div>
+
+                </div>
+            </main>
+
+           
+            
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    </body>
+    
+</html>
