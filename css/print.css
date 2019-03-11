@@ -1,0 +1,16 @@
+header {
+    display: none !important;
+}
+
+body {
+    margin-top: 50px;
+}
+
+button {
+    display: none !important;
+}
+
+#noteInput {
+    
+    display: none !important;
+}
